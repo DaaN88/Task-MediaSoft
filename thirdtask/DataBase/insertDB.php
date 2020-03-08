@@ -1,22 +1,19 @@
 <?php
-	mb_internal_encoding("UTF-8");
+	session_start();
 
-	require_once ".\DataBase\connectToDB.php";
+	require_once "connectToDB.php";
 
 	function insertInDB($data, $arrayWithData){
 
+		$pdo = connectToDataBase();
+
+		$pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 		$bolValidId = false; //флаг для проверки на введение дубликатов в таблицу word
-		$date = date("Y-m-d"); //текущая дата
+		$date = date("Y-m-d H:i:s"); //текущая дата
 
 		$totalAmountWords = $arrayWithData["Общее количество слов"];
 		settype($totalAmountWords, "integer");
-
-		if ( connectToDataBase() ){
-			$pdo = connectToDataBase();
-		} else{
-			echo "Ошибка: не удалось соединиться с БД";
-			exit();
-		}
 
 		//добавляем в таблицу uploaded_text текст из textarea
 		try{
@@ -31,10 +28,8 @@
 
 		}catch(PDOException $e) {
 			$bolValidId = true; //устанавливаем флаг в истину, тем самым блокируем дублирование слов в таблицу word
-			echo "Ошибка выполнения запроса: ".$e->getMessage()."<br>";
-			exit();
+			$_SESSION['errorBd'] = $e->getMessage();
 		}
-		
 
 		//получаем id из uploaded_text для добавление в text_id в word
 		try{
@@ -46,8 +41,8 @@
 			$resId = $idWithUploadedText->fetchAll();
 			
 		}catch(PDOException $e) {
-			echo "Ошибка выполнения запроса: ".$e->getMessage();
-			exit();
+			//echo "Ошибка выполнения запроса: ".$e->getMessage();
+			//exit();
 		}
 
 		$tmpResId = $resId[0]['id'];
@@ -55,7 +50,7 @@
 		// в данном блоке if - если $bolValidId в "истине", то в таблице word есть text_id равный id из таблицы uploaded_text
 		// тогда - блокируем запись в таблицу word
 		if ($bolValidId){
-			echo "Данные уже введены"."<br>";
+			//echo "Данные уже введены"."<br>";
 		}else{
 			
 			$insertQueryInWord = 'INSERT INTO word(text_id, word, count) VALUES (?,?,?)';

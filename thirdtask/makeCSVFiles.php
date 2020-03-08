@@ -1,15 +1,13 @@
 <?php
-	mb_internal_encoding("UTF-8"); //установка внутренней кодировки скрипта
-
+	
 	require_once "makeDirAndMove.php";
 
 	// функция создания csv файла с отчетом об обработке текста
 	function makeCsvFileForString($arrWithData){
 
-		$date = date("d.m.yy");
-		$time = date("h_i_s");
+		$date = date("d.m.yy_h_i_s");
 
-		$fileName = 'TextReport'.'_'.$date.'_'.$time.'.csv';
+		$fileName = 'TextReport'.'_'.$date.'.csv';
 
 		touch($fileName);
 		$file = fopen($fileName, 'w');
@@ -34,10 +32,9 @@
 	//функция создания csv файла с отчетом о загруженных файлах
 	function makeCsvFileForStringFromFile($arrWithData){
 
-		$date = date("d.m.yy");
-		$time = date("h_i_s");
+		$date = date("d.m.yy_h_i_s");
 
-		$fileName = 'TextReportFromFile'.'_'.$date.'_'.$time.'.csv';
+		$fileName = 'TextReportFromFile'.'_'.$date.'.csv';
 
 		touch($fileName);
 		$file = fopen($fileName, 'w');
