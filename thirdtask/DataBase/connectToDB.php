@@ -1,6 +1,5 @@
 <?php
-	mb_internal_encoding("UTF-8");
-
+	
 	function connectToDataBase(){
 
 		$configDB = require 'configForConnectDB.php';
@@ -13,6 +12,7 @@
 			);
 			return $pdo;
 		}catch(PDOException $e) {
+
 			echo "Ошибка выполнения запроса: ".$e->getMessage();
 			exit();
 		}
