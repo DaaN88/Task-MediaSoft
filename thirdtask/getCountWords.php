@@ -1,4 +1,5 @@
 <?php
+
 	require_once "makeCSVFiles.php"; //создание CSV файлов
 
 	function getCountWords ($variableFromTextArea){

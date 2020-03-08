@@ -1,5 +1,7 @@
 <?php
+
 	session_start();
+
 	require_once "makeCSVFiles.php";
 	require_once "getCountWords.php";
 	require_once ".\DataBase\insertDB.php";
