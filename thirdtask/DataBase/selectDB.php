@@ -14,7 +14,6 @@
 			echo "Ошибка выполнения запроса: ".$e->getMessage()."<br>";
 			exit();
 		}
-		
 
 		return $printSelectUploadedText;
 	}
