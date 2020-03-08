@@ -24,13 +24,11 @@
 	}
 
 	echo "<b>","Предупреждение:","</b>","<br>";
-	if ($_SESSION['warning']){
+	if ($_SESSION['warning'] && $_SESSION['goodExec'] == NULL){
 		foreach ($_SESSION['warning'] as $key => $value) {
 			echo $value, "<br>";
 		}
-	}
-
-	if ($_SESSION['goodExec']){
+	}elseif ($_SESSION['goodExec']){
 		echo $_SESSION['goodExec'],"<br>";
 	}
 
