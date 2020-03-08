@@ -1,5 +1,4 @@
 <?php
-
 	require_once "makeDirAndMove.php";
 
 	// функция создания csv файла с отчетом об обработке текста
