@@ -1,18 +1,19 @@
 <?php
-	mb_internal_encoding("UTF-8");
+	session_start();
 
 	require_once "connectToDB.php";
 
 	function selectFromDataBase (){
 
 		$pdo = connectToDataBase();
+
+		$pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		
 		try{
 			$selectAllQueryUploadedText = 'SELECT * FROM uploaded_text';
 			$printSelectUploadedText = $pdo->query($selectAllQueryUploadedText)->fetchAll(PDO::FETCH_ASSOC);
 		}catch(PDOException $e){
-			echo "Ошибка выполнения запроса: ".$e->getMessage()."<br>";
-			exit();
+			$_SESSION['errorBd'] = $e->getMessage();
 		}
 		
 
