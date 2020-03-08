@@ -1,10 +1,7 @@
 <?php
-
 session_start();
-	mb_internal_encoding("UTF-8"); //установка внутренней кодировки скрипта
 
 	require_once "validateDataPOST.php";
-	require_once "validateDataFILES.php";
 
 	require_once "getCountWords.php"; //обработка текста из textarea
 	require_once ".\DataBase\insertDB.php";

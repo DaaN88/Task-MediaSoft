@@ -1,4 +1,3 @@
-
 <form name="mainForm" action="handlerForm.php" method="POST" enctype="multipart/form-data">
 
 	<p>
