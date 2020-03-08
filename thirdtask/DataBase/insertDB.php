@@ -7,8 +7,6 @@
 
 		$pdo = connectToDataBase();
 
-		$pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
 		$bolValidId = false; //флаг для проверки на введение дубликатов в таблицу word
 		$date = date("Y-m-d H:i:s"); //текущая дата
 
@@ -41,8 +39,7 @@
 			$resId = $idWithUploadedText->fetchAll();
 			
 		}catch(PDOException $e) {
-			//echo "Ошибка выполнения запроса: ".$e->getMessage();
-			//exit();
+			$_SESSION['errorBd'] = $e->getMessage();
 		}
 
 		$tmpResId = $resId[0]['id'];
@@ -50,7 +47,7 @@
 		// в данном блоке if - если $bolValidId в "истине", то в таблице word есть text_id равный id из таблицы uploaded_text
 		// тогда - блокируем запись в таблицу word
 		if ($bolValidId){
-			//echo "Данные уже введены"."<br>";
+			$_SESSION['warning']['bd'] = "Данные уже введены";
 		}else{
 			
 			$insertQueryInWord = 'INSERT INTO word(text_id, word, count) VALUES (?,?,?)';

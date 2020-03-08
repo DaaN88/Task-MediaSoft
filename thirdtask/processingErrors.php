@@ -24,14 +24,21 @@
 	}
 
 	echo "<b>","Предупреждение:","</b>","<br>";
-	if ($_SESSION['warning'] && $_SESSION['goodExec'] == NULL){
+	if ($_SESSION['warning'] && $_SESSION['goodExec'] == NULL && $_SESSION['errorBd'] == NULL){
 		foreach ($_SESSION['warning'] as $key => $value) {
 			echo $value, "<br>";
 		}
 	}elseif ($_SESSION['goodExec']){
 		echo $_SESSION['goodExec'],"<br>";
+	}elseif($_SESSION['warning'] && $_SESSION['errorBd'] != NULL){
+		foreach ($_SESSION['warning'] as $key => $value) {
+			echo $value, "<br>";
+		}
+	}else{
+		echo "Предупреждений нет", "<br>";
 	}
 
 	unset($_SESSION['errorBd']);
 	unset($_SESSION['error']);
 	unset($_SESSION['goodExec']);
+	unset($_SESSION['warning']);
