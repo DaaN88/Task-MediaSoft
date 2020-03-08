@@ -1,6 +1,5 @@
 <?php
-	mb_internal_encoding("UTF-8"); //установка внутренней кодировки скрипта
-
+	
 	function validateDataFILES($valueFiles){
 		
 		$blackList = array(".php", ".phtml", ".php3", ".php4", ".html");

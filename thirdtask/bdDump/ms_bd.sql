@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 06 2020 г., 14:51
+-- Время создания: Мар 08 2020 г., 12:19
 -- Версия сервера: 8.0.15
 -- Версия PHP: 7.3.9
 
@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `uploaded_text` (
   `id` int(11) NOT NULL,
   `content` varchar(500) NOT NULL,
-  `date` date NOT NULL,
+  `date` datetime DEFAULT NULL,
   `words_count` int(50) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

@@ -1,5 +1,5 @@
 <?php
-	mb_internal_encoding("UTF-8");
+	session_start();
 	require_once ".\DataBase\selectDB.php";
 	$printSelectUploadedText = selectFromDataBase();
 ?>
@@ -53,4 +53,9 @@
 			</td>
 		</tr>
 	</table>
+</p>
+<p>
+	<?php
+	require_once "processingErrors.php";
+	?>
 </p>

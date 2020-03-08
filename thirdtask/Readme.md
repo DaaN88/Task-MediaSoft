@@ -36,3 +36,4 @@ UploadingFiles.php используют файл GetCountWords.php;<br>
 	 5.11). makeCSVFiles.php и makeDirAndMove.php отвечают за csv файлы и директорию csv_file соответственно;<br>
 	 5.12). функция из makeCSVFiles.php используется в файлах formProcessing.php и processingUploadingFiles.php;<br>
 	 5.13). Функция из makeDirAndMove.php вызывается только в makeCSVFiles.php;
+	 5.14). heandlerForm.php осуществляет редирект после обработки формы.
