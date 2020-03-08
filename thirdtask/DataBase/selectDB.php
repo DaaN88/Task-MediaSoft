@@ -15,7 +15,6 @@
 		}catch(PDOException $e){
 			$_SESSION['errorBd'] = $e->getMessage();
 		}
-		
 
 		return $printSelectUploadedText;
 	}
