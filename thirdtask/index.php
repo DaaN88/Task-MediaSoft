@@ -1,9 +1,6 @@
 <?php
-<<<<<<< HEAD
-	mb_internal_encoding("UTF-8");
-=======
 	session_start();
->>>>>>> ForCorrecting
+
 	require_once ".\DataBase\selectDB.php";
 	$printSelectUploadedText = selectFromDataBase();
 ?>
@@ -57,12 +54,9 @@
 			</td>
 		</tr>
 	</table>
-<<<<<<< HEAD
-=======
 </p>
 <p>
 	<?php
 	require_once "processingErrors.php";
 	?>
->>>>>>> ForCorrecting
 </p>

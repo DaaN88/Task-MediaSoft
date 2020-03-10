@@ -1,39 +1,20 @@
 <?php
-	mb_internal_encoding("UTF-8");
-<<<<<<< HEAD
+
+	session_start();
 	
-	function getDetailSelectWordDB($a){
-
-		try{
-		
-		$pdo = new PDO ('mysql:dbname=ms_bd;host=localhost:3306', 'root', '');
-		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			
-		}catch(PDOException $e) {
-				
-			echo "Ошибка выполнения запроса: ".$e->getMessage();
-		}
-
-		$selectQueryWord = "SELECT * FROM word WHERE text_id ="."{$a}";
-		$printSelectWord = $pdo->query($selectQueryWord)->fetchAll(PDO::FETCH_ASSOC);
-
-=======
-
 	require_once "connectToDB.php";
 	
 	function getDetailSelectWordDB($a){
 
 		$pdo = connectToDataBase();
-
+		
 		try{
 			$selectQueryWord = "SELECT * FROM word WHERE text_id ="."{$a}";
 			$printSelectWord = $pdo->query($selectQueryWord)->fetchAll(PDO::FETCH_ASSOC);
 		}catch(PDOException $e){
-			echo "Ошибка выполнения запроса: ".$e->getMessage()."<br>";
-			exit();
+			$_SESSION['errorBd'] = $e->getMessage();
 		}
 
->>>>>>> ForCorrecting
 		echo"<p>";
 			echo"<table>";
 				echo"<tr>";

@@ -1,9 +1,4 @@
 <?php
-<<<<<<< HEAD
-	mb_internal_encoding("UTF-8"); //установка внутренней кодировки скрипта
-	
-=======
->>>>>>> ForCorrecting
 	require_once "makeCSVFiles.php"; //создание CSV файлов
 
 	function getCountWords ($variableFromTextArea){
