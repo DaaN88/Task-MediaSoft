@@ -1,23 +1,14 @@
 <?php
 <<<<<<< HEAD
 	session_start();
-
+	function connectToDataBase(){
 =======
-	
->>>>>>> 52b86f9662ca352ac720b4ef0fba493688cbea2b
+
+	session_start();
+
 	function connectToDataBase(){
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-		try{
-			$pdo = new PDO ('mysql:dbname=ms_bd;host=localhost:3306', 'root', '');
-			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			return $pdo;
-		}catch(PDOException $e) {
-			return false;
-=======
-=======
->>>>>>> ForCorrecting
+>>>>>>> 6df9d5f1aedc4f84d5e322a0b984ad1c9b70e447
 		$configDB = require 'configForConnectDB.php';
 
 		try{
@@ -29,16 +20,6 @@
 			$pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			return $pdo;
 		}catch(PDOException $e) {
-<<<<<<< HEAD
->>>>>>> ForCorrecting
-=======
-<<<<<<< HEAD
 			$_SESSION['errorBd'] = $e->getMessage();
-=======
-
->>>>>>> ForCorrecting
-			echo "Ошибка выполнения запроса: ".$e->getMessage();
-			exit();
->>>>>>> 52b86f9662ca352ac720b4ef0fba493688cbea2b
 		}
 	}

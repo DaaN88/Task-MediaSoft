@@ -1,6 +1,32 @@
 <?php
-session_start();
+<<<<<<< HEAD
+	mb_internal_encoding("UTF-8");
+<<<<<<< HEAD
+	
+	function getDetailSelectWordDB($a){
 
+		try{
+		
+		$pdo = new PDO ('mysql:dbname=ms_bd;host=localhost:3306', 'root', '');
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			
+		}catch(PDOException $e) {
+				
+			echo "Ошибка выполнения запроса: ".$e->getMessage();
+		}
+
+		$selectQueryWord = "SELECT * FROM word WHERE text_id ="."{$a}";
+		$printSelectWord = $pdo->query($selectQueryWord)->fetchAll(PDO::FETCH_ASSOC);
+
+=======
+=======
+<<<<<<< HEAD
+	session_start();
+>>>>>>> ForCorrecting
+
+=======
+	
+>>>>>>> 52b86f9662ca352ac720b4ef0fba493688cbea2b
 	require_once "connectToDB.php";
 	
 	function getDetailSelectWordDB($a){
@@ -14,6 +40,10 @@ session_start();
 			$_SESSION['errorBd'] = $e->getMessage();
 		}
 
+<<<<<<< HEAD
+>>>>>>> ForCorrecting
+=======
+>>>>>>> ForCorrecting
 		echo"<p>";
 			echo"<table>";
 				echo"<tr>";

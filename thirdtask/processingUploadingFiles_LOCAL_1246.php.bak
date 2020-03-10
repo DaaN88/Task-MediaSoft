@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-=======
-
->>>>>>> 6df9d5f1aedc4f84d5e322a0b984ad1c9b70e447
 	session_start();
 
 	require_once "makeCSVFiles.php";

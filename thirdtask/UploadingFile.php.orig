@@ -1,15 +1,10 @@
 <?php
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-	session_start();
->>>>>>> ForCorrecting
 =======
 
+>>>>>>> 6df9d5f1aedc4f84d5e322a0b984ad1c9b70e447
 	session_start();
 
->>>>>>> ForCorrecting
 	require_once "validateDataFILES.php";
 	require_once "processingUploadingFiles.php"; //обработка загрузки файлов
 
@@ -18,15 +13,5 @@
 	if ($validVariableFromFiles['name'] != ""){
 		processingUploadingFiles($validVariableFromFiles);
 	}elseif($validVariableFromFiles['error'] == 4 || $validVariableFromFiles['name'] == NULL){
-<<<<<<< HEAD
-<<<<<<< HEAD
-		echo "Файлы пользователем не загружались";
-=======
 		$_SESSION['warning']['files'] = "Файлы пользователем не загружались";
->>>>>>> ForCorrecting
-=======
-
-		$_SESSION['warning']['files'] = "Файлы пользователем не загружались";
-
->>>>>>> ForCorrecting
 	}

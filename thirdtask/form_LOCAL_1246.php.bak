@@ -1,8 +1,4 @@
 <form name="mainForm" action="handlerForm.php" method="POST" enctype="multipart/form-data">
-<<<<<<< HEAD
-=======
-
->>>>>>> 6df9d5f1aedc4f84d5e322a0b984ad1c9b70e447
 	<p>
 		<b>Обработка текста:</b><br>
 		<textarea name="textFromUser" rows="20" cols="100">Введите текст</textarea>

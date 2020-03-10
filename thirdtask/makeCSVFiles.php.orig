@@ -1,35 +1,16 @@
 <?php
 <<<<<<< HEAD
-<<<<<<< HEAD
-	mb_internal_encoding("UTF-8"); //установка внутренней кодировки скрипта
 
 =======
-	
->>>>>>> ForCorrecting
-=======
-
->>>>>>> ForCorrecting
+>>>>>>> 6df9d5f1aedc4f84d5e322a0b984ad1c9b70e447
 	require_once "makeDirAndMove.php";
 
 	// функция создания csv файла с отчетом об обработке текста
 	function makeCsvFileForString($arrWithData){
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-		$date = date("d.m.yy");
-		$time = date("h_i_s");
-
-		$fileName = 'TextReport'.'_'.$date.'_'.$time.'.csv';
-=======
 		$date = date("d.m.yy_h_i_s");
 
 		$fileName = 'TextReport'.'_'.$date.'.csv';
->>>>>>> ForCorrecting
-=======
-		$date = date("d.m.yy_h_i_s");
-
-		$fileName = 'TextReport'.'_'.$date.'.csv';
->>>>>>> ForCorrecting
 
 		touch($fileName);
 		$file = fopen($fileName, 'w');
@@ -54,22 +35,9 @@
 	//функция создания csv файла с отчетом о загруженных файлах
 	function makeCsvFileForStringFromFile($arrWithData){
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-		$date = date("d.m.yy");
-		$time = date("h_i_s");
-
-		$fileName = 'TextReportFromFile'.'_'.$date.'_'.$time.'.csv';
-=======
 		$date = date("d.m.yy_h_i_s");
 
 		$fileName = 'TextReportFromFile'.'_'.$date.'.csv';
->>>>>>> ForCorrecting
-=======
-		$date = date("d.m.yy_h_i_s");
-
-		$fileName = 'TextReportFromFile'.'_'.$date.'.csv';
->>>>>>> ForCorrecting
 
 		touch($fileName);
 		$file = fopen($fileName, 'w');

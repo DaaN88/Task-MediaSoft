@@ -29,7 +29,7 @@
 
 			$_SESSION['errorBd'] = $e->getMessage();
 		}
-
+    
 		//получаем id из uploaded_text для добавление в text_id в word
 		try{
 			

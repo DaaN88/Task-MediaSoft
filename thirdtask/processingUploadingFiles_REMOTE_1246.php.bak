@@ -1,8 +1,5 @@
 <?php
-<<<<<<< HEAD
-=======
 
->>>>>>> 6df9d5f1aedc4f84d5e322a0b984ad1c9b70e447
 	session_start();
 
 	require_once "makeCSVFiles.php";
@@ -31,6 +28,7 @@
 
 			}else {
 			    $_SESSION['error']['files'] = "Возможная атака с помощью файловой загрузки!";
+			}
 
 		}elseif (file_exists($uploadfile)) {
 			$_SESSION['error']['files'] = "Файл уже загружен";

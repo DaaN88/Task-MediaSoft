@@ -1,11 +1,11 @@
 <?php
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 	mb_internal_encoding("UTF-8"); //установка внутренней кодировки скрипта
 =======
 >>>>>>> ForCorrecting
-=======
->>>>>>> ForCorrecting
+>>>>>>> 6df9d5f1aedc4f84d5e322a0b984ad1c9b70e447
 
 	function validateDataPOST($value){
 		

@@ -1,14 +1,8 @@
 <?php
 session_start();
-<<<<<<< HEAD
 	
 	require_once "validateDataPOST.php";
 	require_once "validateDataFILES.php";
-=======
-
-	require_once "validateDataPOST.php";
-
->>>>>>> 6df9d5f1aedc4f84d5e322a0b984ad1c9b70e447
 	require_once "getCountWords.php"; //обработка текста из textarea
 	require_once ".\DataBase\insertDB.php";
 
