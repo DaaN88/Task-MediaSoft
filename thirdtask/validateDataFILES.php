@@ -1,10 +1,5 @@
 <?php
-<<<<<<< HEAD
-	mb_internal_encoding("UTF-8"); //установка внутренней кодировки скрипта
 
-=======
-	
->>>>>>> ForCorrecting
 	function validateDataFILES($valueFiles){
 		
 		$blackList = array(".php", ".phtml", ".php3", ".php4", ".html");

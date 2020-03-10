@@ -1,16 +1,6 @@
 <?php
-	mb_internal_encoding("UTF-8");
-
+	session_start();
 	function connectToDataBase(){
-
-<<<<<<< HEAD
-		try{
-			$pdo = new PDO ('mysql:dbname=ms_bd;host=localhost:3306', 'root', '');
-			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			return $pdo;
-		}catch(PDOException $e) {
-			return false;
-=======
 		$configDB = require 'configForConnectDB.php';
 
 		try{
@@ -19,10 +9,9 @@
 		   		$configDB['user'],
 				$configDB['password']
 			);
+			$pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			return $pdo;
 		}catch(PDOException $e) {
->>>>>>> ForCorrecting
-			echo "Ошибка выполнения запроса: ".$e->getMessage();
-			exit();
+			$_SESSION['errorBd'] = $e->getMessage();
 		}
 	}

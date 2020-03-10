@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 	mb_internal_encoding("UTF-8");
 <<<<<<< HEAD
 	
@@ -18,21 +19,30 @@
 		$printSelectWord = $pdo->query($selectQueryWord)->fetchAll(PDO::FETCH_ASSOC);
 
 =======
+=======
+<<<<<<< HEAD
+	session_start();
+>>>>>>> ForCorrecting
 
+=======
+	
+>>>>>>> 52b86f9662ca352ac720b4ef0fba493688cbea2b
 	require_once "connectToDB.php";
 	
 	function getDetailSelectWordDB($a){
 
 		$pdo = connectToDataBase();
-
+		
 		try{
 			$selectQueryWord = "SELECT * FROM word WHERE text_id ="."{$a}";
 			$printSelectWord = $pdo->query($selectQueryWord)->fetchAll(PDO::FETCH_ASSOC);
 		}catch(PDOException $e){
-			echo "Ошибка выполнения запроса: ".$e->getMessage()."<br>";
-			exit();
+			$_SESSION['errorBd'] = $e->getMessage();
 		}
 
+<<<<<<< HEAD
+>>>>>>> ForCorrecting
+=======
 >>>>>>> ForCorrecting
 		echo"<p>";
 			echo"<table>";
