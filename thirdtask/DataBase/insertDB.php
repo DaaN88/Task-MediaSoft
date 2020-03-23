@@ -1,4 +1,5 @@
 <?php
+
 	session_start();
 
 	require_once "connectToDB.php";
@@ -12,7 +13,7 @@
 
 		$totalAmountWords = $arrayWithData["Общее количество слов"];
 		settype($totalAmountWords, "integer");
-    
+
 		//добавляем в таблицу uploaded_text текст из textarea
 		try{
 			$insertQuery = 'INSERT INTO uploaded_text(content, date, words_count) VALUES (?,?,?)';
@@ -28,7 +29,7 @@
 			$bolValidId = true; //устанавливаем флаг в истину, тем самым блокируем дублирование слов в таблицу word
 			$_SESSION['errorBd'] = $e->getMessage();
 		}
-    
+
 		//получаем id из uploaded_text для добавление в text_id в word
 		try{
 			
