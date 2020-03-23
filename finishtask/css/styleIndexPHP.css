@@ -1,0 +1,116 @@
+body {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: 0;
+}
+
+.fullwidth-bg {
+	
+	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    overflow: hidden;
+    border: 0;
+}
+ 
+.fullwidth-bg__video {
+	
+	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+}
+
+.refRegistration{
+	display: inline-block;
+	top: 10%;
+	right: 10%;
+	border: 2px solid #FBFE00;
+	position: absolute;
+}
+
+.refRegistration a{
+	color: #FBFE00;
+	text-decoration: none; /*убрать подчеркивание у ссылок*/
+}
+
+.windowLogin {
+	display: inline-block;
+	width: 200px;
+	height: 170px;
+	top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	border: 2px solid transparent;
+	border-radius: 15px;
+	position: absolute;
+}
+
+.windowLogin:hover{
+	transition: all .3s;
+	border-color: #ffc222;
+}
+
+.fieldLogin{
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	margin-left: -80px;
+	top: 12%;
+	width: auto;
+	text-align: center;
+	color: #FBFE00;
+}
+
+.fieldLogin:hover::after{
+	content: "Введите Ваш логин";
+	background: rgba(255,255,230,0.9); /* Полупрозрачный цвет фона */
+	text-align: center;
+	white-space: nowrap;
+	position: absolute;
+	left: 115%;
+	top: 50%;
+	padding: 5px 10px; /* Поля */
+    border: 1px solid #333; /* Параметры рамки */
+	z-index: 2;
+	color: #04819E;
+}
+
+.fieldPassword{
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	margin-left: -80px;
+	top: 42%;
+	width: auto;
+	text-align: center;
+	color: #FBFE00;
+}
+
+.fieldPassword:hover::after{
+	content: "Введите Ваш пароль";
+	background: rgba(255,255,230,0.9); /* Полупрозрачный цвет фона */
+	text-align: center;
+	white-space: nowrap;
+	position: absolute;
+	left: 115%;
+	top: 50%;
+	padding: 5px 10px; /* Поля */
+    border: 1px solid #333; /* Параметры рамки */
+	z-index: 2;
+	color: #04819E;
+}
+
+.loadingMainForm{
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	margin-left: -25px;
+	top: 75%;
+	width: auto;
+	text-align: center;
+}
