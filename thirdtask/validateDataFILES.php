@@ -1,5 +1,4 @@
 <?php
-
 	function validateDataFILES($valueFiles){
 		
 		$blackList = array(".php", ".phtml", ".php3", ".php4", ".html");

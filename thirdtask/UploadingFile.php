@@ -10,7 +10,5 @@
 	if ($validVariableFromFiles['name'] != ""){
 		processingUploadingFiles($validVariableFromFiles);
 	}elseif($validVariableFromFiles['error'] == 4 || $validVariableFromFiles['name'] == NULL){
-
 		$_SESSION['warning']['files'] = "Файлы пользователем не загружались";
-
 	}

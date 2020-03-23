@@ -1,10 +1,7 @@
 <?php
-<<<<<<< HEAD
-	session_start();
 
-=======
+	session_start();
 	
->>>>>>> 52b86f9662ca352ac720b4ef0fba493688cbea2b
 	require_once "connectToDB.php";
 	
 	function getDetailSelectWordDB($a){
