@@ -1,0 +1,57 @@
+.body {
+	display: inline-block;
+	position: absolute;
+}
+
+.formUploading {
+	display: inline-block;
+	position: relative;
+	left: 20%;
+	margin-top: 5%;
+}
+
+.buttonUploadFiles {
+	display: inline-block;
+	position: relative;
+}
+
+.buttonSubmit {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 15%;
+}
+
+.uploadedPictures img {
+	
+	display: inline-block;
+	position: relative;
+    border: 2px solid #55c5e9; /* Рамка вокруг фотографии */
+    padding: 5px; /* Расстояние от картинки до рамки */
+    background: #666; /* Цвет фона */
+    margin-right: 10px; /* Отступ справа */
+    margin-bottom: 10px; /* Отступ снизу */
+    transition: 1s;
+}
+
+.uploadedPictures img:hover{
+	transform: scale(5);
+	z-index: 10;
+}
+
+.information {
+	display: inline-block;
+	position: absolute;
+	left: 5%;
+}
+
+.refs {
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	width: 600px;
+}
+
+.refs a {
+	margin: 0 25px;
+	text-decoration: none;
+}
